@@ -5,7 +5,7 @@ go 1.21
 toolchain go1.22.2
 
 require (
-	github.com/awgh/bencrypt v0.0.0-20190918184257-b65cb460b2c8
+	github.com/APSN4/bencrypt v0.0.0-20240503095320-5e5dd2506b50
 	github.com/mattn/go-sqlite3 v1.14.22
 	github.com/wailsapp/wails/v2 v2.8.1
 )

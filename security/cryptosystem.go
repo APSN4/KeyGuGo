@@ -1,6 +1,6 @@
 package security
 
-import "github.com/awgh/bencrypt/bc"
+import "github.com/APSN4/bencrypt/bc"
 
 func EncryptFile(filePath string, aesKey []byte) (r bool, err error) {
 	err = bc.EncryptFile(filePath, filePath, aesKey)

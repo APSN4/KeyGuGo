@@ -1,5 +1,5 @@
-github.com/awgh/bencrypt v0.0.0-20190918184257-b65cb460b2c8 h1:+PV40XAZWC7pwkPDW/aJQE0IXBl8dHQ/MKFEJjZjwOM=
-github.com/awgh/bencrypt v0.0.0-20190918184257-b65cb460b2c8/go.mod h1:Z5/JiO71bJ2Q0nrj/B1M3LoDcPU8Sn2d/f7KfCT3SXk=
+github.com/APSN4/bencrypt v0.0.0-20240503095320-5e5dd2506b50 h1:BwimVePMG5JD/0/8xOERzvFVI9KKtucD6COQJbWwWDE=
+github.com/APSN4/bencrypt v0.0.0-20240503095320-5e5dd2506b50/go.mod h1:JBde6DCg9Bkt19xbPXfPtogWk6WWHxAswVqcas+/pRg=
 github.com/bep/debounce v1.2.1 h1:v67fRdBA9UQu2NhLFXrSg0Brw7CexQekrBwDMM8bzeY=
 github.com/bep/debounce v1.2.1/go.mod h1:H8yggRPQKLUhUoqrJC1bO2xNya7vanpDl7xR3ISbCJ0=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
