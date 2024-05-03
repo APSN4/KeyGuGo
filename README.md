@@ -1,11 +1,19 @@
-# README
+# KeyGuGo
 
-## About
+Это приложение для хранения приватных данных. Здесь используется шифрование
+AES-256-CBC с использованием локального хранилища. Ваши данные в полной сохранности.
 
-This is the official Wails React template.
+<img alt="Logo" height="256" src="./build/appicon.png" width="256" align="middle" style="display: block; margin: 0 auto;">
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
+![Screenshot](./assets/Screenshot.png)  
+
+Функционал:
+* Добавление заметок
+* Удаление заметок
+* Скопировать полностью содержимое заметки
+* Редактировать заметку  
+
+Приложение доступно на Windows x64, Linux x64, MacOS arm64.
 
 ## Live Development
 
