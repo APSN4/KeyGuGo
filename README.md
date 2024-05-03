@@ -1,9 +1,10 @@
 # KeyGuGo
 
 Это приложение для хранения приватных данных. Здесь используется шифрование
-AES-256-CBC с использованием локального хранилища. Ваши данные в полной сохранности.
-
-<img alt="Logo" height="256" src="./build/appicon.png" width="256" align="middle" style="display: block; margin: 0 auto;">
+AES-256-CBC с использованием локального хранилища. Ваши данные в полной сохранности.  
+<p align="center">
+  <img width="256" height="256" src="./build/appicon.png">
+</p>
 
 ![Screenshot](./assets/Screenshot.png)  
 
