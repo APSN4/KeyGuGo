@@ -1,17 +1,16 @@
 import {useEffect, useState} from 'react';
-import logo from './assets/images/logo-universal.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faTrash, faCopy, faPen } from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCopy, faPen, faPlus, faTrash} from '@fortawesome/free-solid-svg-icons';
 import './App.css';
-import {Greet, GetDB, AddNoteToDB, DeleteNoteFromDB, EditNoteToDB, GetKey} from "../wailsjs/go/main/App";
+import {AddNoteToDB, DeleteNoteFromDB, EditNoteToDB, GetDB, GetKey, Greet} from "../wailsjs/go/main/App";
 import {
+    Alert,
     Button,
     Dialog,
     DialogActions,
     DialogContent,
     DialogContentText,
     DialogTitle,
-    Modal,
     TextField
 } from "@mui/material";
 
@@ -28,6 +27,7 @@ function App() {
     const [contentEdit, setContentEdit] = useState('Логин, пароль и что-то еще...');
     const [key, setKey] = useState('AES-256-CBC');
     const [modalKeyIsOpen, setModalKeyIsOpen] = useState(true);
+    const [showWarningAlert, setShowWarningAlert] = useState(false);
 
     const [notes, setNotes] = useState([]);
 
@@ -81,14 +81,19 @@ function App() {
 
     const handleKeySubmit = async (event) => {
         event.preventDefault();
-        await GetKey(key).then(async b => {
+        const result = await GetKey(key).then(async b => {
             if (b === true) {
                 await handleClose();
                 await getDB();
+                return true
             } else {
-                await window.close();
+                return false
             }
-        });
+        })
+        if (result === false) {
+            setShowWarningAlert(true);
+        }
+        return result
     }
 
     const restartNotes = () => {
@@ -316,11 +321,15 @@ function App() {
                                 value={key}
                                 onChange={(e) => setKey(e.target.value)}
                             />
-                            <div style={{userSelect: 'none'}}>|</div>
                             <DialogActions>
                                 <Button type="submit">Открыть</Button>
                             </DialogActions>
                         </form>
+                        {showWarningAlert && (
+                            <Alert variant="outlined" severity="warning">
+                                Неправильный ключ! Пожалуйста, попробуйте снова.
+                            </Alert>
+                        )}
                     </DialogContent>
                 </Dialog>
             </div>
