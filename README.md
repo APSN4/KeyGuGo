@@ -22,6 +22,7 @@ AES-256-CBC с использованием локального хранили�
 
 ## Live Development
 
+- `go get`
 - `go install github.com/wailsapp/wails/v2/cmd/wails@latest`
 - `cd frontend`
 - `npm i`
