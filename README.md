@@ -42,3 +42,44 @@ to this in your browser, and you can call your Go code from devtools.
 ## Building
 
 To build a redistributable, production mode package, use `wails build`.
+
+## Fix problems
+
+The wails command appears to be missing?
+If your system is reporting that the wails command is missing or giving the error command 'wails' not found the it is probably due to go/bin directory is not added in the PATH variable
+
+**if you don't get this error you can skip this section.**
+
+to add that first you need to know in which directory the Go is installed in to find that you can run the following command in the terminal.
+
+`go env GOPATH`
+
+it will display the path where Go is installed in
+
+let say the path in `home/[username]/go`
+
+follow these steps to `home/[username]/go/bin/` in PATH environment
+
+opened the terminal
+
+open the `~/.bashrc` file
+nano `~/.bashrc`
+
+go to bottom of the file and add following line
+
+export `PATH=$PATH:/home/[username]/go/bin/`
+
+you should use the actual path of go/bin folder where the go is installed
+
+don't forget to add / at the end
+
+Press Ctrl + X to exit nano editor, and type "Y" to save changes.
+
+Finally run the following command
+
+`source ~/.bashrc`
+
+PATH is successfully added
+
+now you can check the installation using the command
+wails version
