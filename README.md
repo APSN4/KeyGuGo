@@ -16,7 +16,22 @@ AES-256-CBC с использованием локального хранили�
 
 Приложение доступно на Windows x64, Linux x64, MacOS arm64.
 
+## Dependencies
+- Golang 1.22.4
+- NodeJS 18.12.0
+
 ## Live Development
+
+- `go install github.com/wailsapp/wails/v2/cmd/wails@latest`
+- `cd frontend`
+- `npm i`
+
+go-sqlite3 is cgo package. If you want to build your app using go-sqlite3, you need gcc. However, after you have built and installed go-sqlite3 with go install github.com/mattn/go-sqlite3 (which requires gcc), you can build your app without relying on gcc in future.
+
+Important: because this is a CGO enabled package, you are required to set the environment variable CGO_ENABLED=1 and have a **gcc compiler** present within your path.
+
+1. set CGO_ENABLED=1
+2. set CC=gcc
 
 To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
 server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
